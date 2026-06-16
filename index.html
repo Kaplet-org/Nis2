@@ -22,17 +22,18 @@
   --teal:    #06D6A0;
   --blue:    #4CC9F0;
 }
- 
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
- 
+
 /* ── TOP BAR ── */
 .top-bar{height:2px;background:var(--green)}
 header{background:var(--black);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .logo{font-size:17px;font-weight:700;color:var(--green);letter-spacing:2px}
+.logo-img{height:18px;display:block}
 .hright{font-size:10px;color:var(--dim);letter-spacing:1.5px;text-transform:uppercase}
- 
+
 /* ── PROGRESS ── */
 .prog-wrap{max-width:860px;margin:0 auto;padding:28px 32px 0}
 .prog-steps{display:flex;border-bottom:1px solid var(--border)}
@@ -41,10 +42,10 @@ header{background:var(--black);border-bottom:1px solid var(--border);padding:14p
 .prog-step.done{color:var(--gray);border-bottom-color:var(--green2)}
 .prog-step .sn{font-size:16px;font-weight:800;display:block;margin-bottom:3px}
 .prog-step.done .sn::before{content:'✓ ';font-size:12px}
- 
+
 /* ── WRAP ── */
 .wrap{max-width:860px;margin:0 auto;padding:36px 32px 100px}
- 
+
 /* ── CARDS ── */
 .card{display:none}.card.on{display:block}
 .vtag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
@@ -52,7 +53,7 @@ header{background:var(--black);border-bottom:1px solid var(--border);padding:14p
 .ctitle strong{font-weight:700}
 .csub{font-size:12.5px;color:var(--gray);margin-bottom:28px;line-height:1.65;max-width:680px}
 .hrule{height:1px;background:var(--border);margin-bottom:28px}
- 
+
 /* ── FIELDS ── */
 .fg{margin-bottom:26px}
 .flabel{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-bottom:10px}
@@ -62,7 +63,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
 select option{background:var(--dark)}
 textarea{resize:vertical;min-height:72px;color:var(--gray)}
 textarea:focus{color:var(--white)}
- 
+
 .rg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .rg.cols3{grid-template-columns:1fr 1fr 1fr}
 .ri{padding:11px 14px;border:1px solid var(--border);border-radius:3px;cursor:pointer;transition:all .15s;font-size:12px;color:var(--gray);display:flex;align-items:flex-start;gap:10px;background:var(--card);line-height:1.4}
@@ -71,15 +72,15 @@ textarea:focus{color:var(--white)}
 .ri input{display:none}
 .dot{width:13px;height:13px;border:1.5px solid var(--dim);border-radius:50%;flex-shrink:0;margin-top:2px;transition:all .15s}
 .ri.s .dot{border-color:var(--green);background:var(--green)}
- 
+
 .sdiv{margin:32px 0 24px;padding-top:24px;border-top:1px solid var(--border)}
 .sdiv-title{font-size:11px;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
- 
+
 .chips{display:flex;flex-wrap:wrap;gap:7px}
 .chip{padding:6px 14px;border:1px solid var(--border);border-radius:20px;font-size:11px;color:var(--gray);cursor:pointer;transition:all .15s}
 .chip:hover{border-color:var(--dim);color:var(--white)}
 .chip.s{border-color:var(--green);color:var(--green);background:rgba(61,237,122,.07)}
- 
+
 /* ── NAV ── */
 .nav{display:flex;justify-content:space-between;align-items:center;margin-top:36px}
 .btn{padding:11px 26px;border:none;border-radius:3px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .18s;letter-spacing:.5px}
@@ -89,31 +90,31 @@ textarea:focus{color:var(--white)}
 .btn-next:hover{background:#60f094;transform:translateY(-1px)}
 .btn-go{background:var(--green);color:var(--black);font-size:13.5px;padding:13px 32px}
 .btn-go:hover{background:#60f094;transform:translateY(-1px)}
- 
+
 /* ── RESULTS (screen) ── */
 #results{display:none}
 .res-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
 .res-title{font-size:34px;font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.1}
 .res-title strong{color:var(--green);font-weight:700}
- 
+
 .nis2badge{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:3px;font-size:12.5px;font-weight:600;margin-bottom:8px;border:1px solid}
 .b-ess{background:rgba(255,68,68,.1);color:var(--red);border-color:var(--red)}
 .b-imp{background:rgba(255,209,102,.1);color:var(--yellow);border-color:var(--yellow)}
 .b-ver{background:rgba(76,201,240,.1);color:var(--blue);border-color:var(--blue)}
 .b-out{background:rgba(6,214,160,.1);color:var(--teal);border-color:var(--teal)}
 .nis2desc{font-size:12px;color:var(--gray);line-height:1.65;max-width:720px;margin-bottom:28px}
- 
+
 .scores{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:36px}
 .sbox{border:1px solid var(--border);border-radius:3px;padding:20px;text-align:center}
 .sbox.r{border-color:rgba(255,68,68,.35)}.sbox.y{border-color:rgba(255,209,102,.35)}.sbox.g{border-color:rgba(6,214,160,.35)}
 .snum{font-size:48px;font-weight:900;line-height:1}
 .sbox.r .snum{color:var(--red)}.sbox.y .snum{color:var(--yellow)}.sbox.g .snum{color:var(--teal)}
 .slabel{font-size:8.5px;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase;margin-top:6px}
- 
+
 .vsec{margin-bottom:36px}
 .vsec-header{font-size:9px;letter-spacing:2px;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid var(--border);margin-bottom:0}
 .vsec-header.r{color:var(--red)}.vsec-header.y{color:var(--yellow)}.vsec-header.g{color:var(--teal)}.vsec-header.b{color:var(--blue)}
- 
+
 .gi{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
 .gi:last-child{border-bottom:none}
 .gacc{width:3px;border-radius:2px;flex-shrink:0;align-self:stretch}
@@ -125,14 +126,14 @@ textarea:focus{color:var(--white)}
 .gdesc{font-size:11.5px;color:var(--gray);line-height:1.6}
 .gart{font-size:10px;color:var(--green);margin-top:5px}
 .gact{font-size:11px;color:var(--white);margin-top:5px;font-style:italic}
- 
+
 .nbox{border:1px solid var(--green);border-radius:3px;padding:22px;margin-top:32px;background:rgba(61,237,122,.03)}
 .nbox-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
 .nbox-body{font-size:12.5px;color:var(--gray);line-height:1.7}
- 
+
 .proposta-box{margin-top:24px;border:1px solid var(--border);border-radius:3px;padding:22px}
 .proposta-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
- 
+
 /* ── PDF BUTTON ── */
 .pdf-btn-wrap{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
 .btn-pdf{
@@ -145,13 +146,13 @@ textarea:focus{color:var(--white)}
 .btn-pdf svg{width:16px;height:16px;flex-shrink:0}
 .btn-reset{background:transparent;border:1px solid var(--border);color:var(--dim);padding:13px 24px;border-radius:3px;cursor:pointer;font-family:inherit;font-size:12.5px;transition:all .2s;letter-spacing:.5px}
 .btn-reset:hover{border-color:var(--dim);color:var(--white)}
- 
+
 /* ── PRINT / PDF STYLES ── */
 @media print {
   /* Hide everything except the print report */
   body > *:not(#printReport){ display:none !important }
   #printReport{ display:block !important }
- 
+
   body{
     background:#ffffff !important;
     color:#111111 !important;
@@ -159,19 +160,19 @@ textarea:focus{color:var(--white)}
     font-size:11pt;
     margin:0;padding:0;
   }
- 
+
   @page{
     size:A4;
     margin:18mm 18mm 22mm 18mm;
   }
- 
+
   #printReport{
     background:#ffffff;
     color:#111111;
     width:100%;
     max-width:100%;
   }
- 
+
   /* Print header */
   .pr-header{
     display:flex;align-items:flex-start;justify-content:space-between;
@@ -179,8 +180,10 @@ textarea:focus{color:var(--white)}
     padding-bottom:10pt;margin-bottom:18pt;
   }
   .pr-logo{font-size:18pt;font-weight:700;color:#3DED7A;letter-spacing:2pt}
+  .pr-logo-img{height:20pt;display:block}
+  .pr-footer-logo{height:11pt;display:inline-block;vertical-align:middle;margin-right:6pt}
   .pr-meta{text-align:right;font-size:8.5pt;color:#666666;line-height:1.6}
- 
+
   /* Classification badge */
   .pr-badge{
     display:inline-block;padding:5pt 12pt;border-radius:3pt;
@@ -191,9 +194,9 @@ textarea:focus{color:var(--white)}
   .pr-badge.imp{background:#fffbf0;color:#b88c00;border-color:#b88c00}
   .pr-badge.ver{background:#f0f8ff;color:#1a6fa8;border-color:#1a6fa8}
   .pr-badge.out{background:#f0fff8;color:#1a7a4a;border-color:#1a7a4a}
- 
+
   .pr-desc{font-size:9.5pt;color:#555555;line-height:1.6;margin-bottom:16pt;max-width:100%}
- 
+
   /* Score boxes */
   .pr-scores{display:flex;gap:10pt;margin-bottom:20pt}
   .pr-score{flex:1;border:1.5pt solid;border-radius:3pt;padding:10pt;text-align:center}
@@ -205,7 +208,7 @@ textarea:focus{color:var(--white)}
   .pr-score.y .pr-score-n{color:#b88c00}
   .pr-score.g .pr-score-n{color:#1a7a4a}
   .pr-score-l{font-size:7pt;letter-spacing:1pt;color:#888888;text-transform:uppercase;margin-top:3pt}
- 
+
   /* Section headers */
   .pr-sec-title{
     font-size:8pt;letter-spacing:2pt;text-transform:uppercase;
@@ -217,7 +220,7 @@ textarea:focus{color:var(--white)}
   .pr-sec-title.g{color:#1a7a4a}
   .pr-sec-title.b{color:#1a6fa8}
   .pr-sec-title.d{color:#888888}
- 
+
   /* Gap items */
   .pr-gi{display:flex;gap:10pt;padding:9pt 0;border-bottom:0.5pt solid #eeeeee}
   .pr-gi:last-child{border-bottom:none}
@@ -232,7 +235,7 @@ textarea:focus{color:var(--white)}
   .pr-gdesc{font-size:9pt;color:#555555;line-height:1.5}
   .pr-gart{font-size:8pt;color:#1a7a4a;margin-top:3pt}
   .pr-gact{font-size:8.5pt;color:#222222;margin-top:3pt;font-style:italic}
- 
+
   /* Next steps */
   .pr-nbox{
     border:1.5pt solid #3DED7A;border-radius:3pt;
@@ -240,7 +243,7 @@ textarea:focus{color:var(--white)}
   }
   .pr-nbox-tag{font-size:7.5pt;letter-spacing:2pt;text-transform:uppercase;color:#1a7a4a;margin-bottom:8pt}
   .pr-nbox-body{font-size:9.5pt;color:#333333;line-height:1.6}
- 
+
   /* Proposta */
   .pr-proposta{border:1.5pt solid #cccccc;border-radius:3pt;padding:12pt;margin-top:14pt}
   .pr-proposta-tag{font-size:7.5pt;letter-spacing:2pt;text-transform:uppercase;color:#888888;margin-bottom:10pt}
@@ -250,7 +253,7 @@ textarea:focus{color:var(--white)}
   .pr-inc-item{font-size:9pt;color:#444444;padding:3pt 0;border-bottom:0.5pt solid #eeeeee;display:flex;gap:8pt}
   .pr-inc-item:last-child{border-bottom:none}
   .pr-inc-arrow{color:#3DED7A;font-weight:700;flex-shrink:0}
- 
+
   /* Footer */
   .pr-footer{
     margin-top:24pt;padding-top:8pt;
@@ -258,7 +261,7 @@ textarea:focus{color:var(--white)}
     display:flex;justify-content:space-between;
     font-size:7.5pt;color:#aaaaaa;
   }
- 
+
   /* Evita tagli di testo tra pagine */
   .pr-gi{page-break-inside:avoid !important;break-inside:avoid !important}
   .pr-nbox{page-break-inside:avoid !important;break-inside:avoid !important}
@@ -267,10 +270,10 @@ textarea:focus{color:var(--white)}
   .pr-gbody{page-break-inside:avoid !important;break-inside:avoid !important}
   .pr-sec-title{page-break-after:avoid !important;break-after:avoid !important}
 }
- 
+
 /* ── PRINT REPORT (hidden on screen, visible when printing) ── */
 #printReport{display:none}
- 
+
 /* responsive */
 @media(max-width:620px){
   .wrap,.prog-wrap{padding-left:16px;padding-right:16px}
@@ -283,26 +286,26 @@ textarea:focus{color:var(--white)}
 </style>
 </head>
 <body>
- 
+
 <div class="top-bar"></div>
 <header>
-  <div class="logo">·KAPLET</div>
+  <img class="logo-img" src="data:image/png;base64,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" alt="Kaplet">
   <div class="hright">NIS 2 Assessment · D.Lgs. 138/2024</div>
 </header>
- 
+
 <div class="prog-wrap" id="progWrap">
   <div class="prog-steps" id="progSteps"></div>
 </div>
- 
+
 <div class="wrap">
- 
+
 <!-- ══ STEP 1 – ANAGRAFICA ══════════════════════════════════════════════ -->
 <div class="card on" id="s1">
   <div class="vtag">_01 / anagrafica cliente</div>
   <div class="ctitle">Chi è <strong>il cliente?</strong></div>
   <div class="csub">Dati aziendali per classificare il soggetto rispetto alla Direttiva NIS 2 — D.Lgs. 138/2024, Artt. 3 e 6, Allegati I e II.</div>
   <div class="hrule"></div>
- 
+
   <div class="fg">
     <div class="flabel">Nome azienda <span class="req">*</span></div>
     <input type="text" id="company" placeholder="es. Rossi Srl" />
@@ -368,7 +371,7 @@ textarea:focus{color:var(--white)}
   </div>
   <div class="nav"><div></div><button class="btn btn-next" onclick="go(2)">Avanti →</button></div>
 </div>
- 
+
 <!-- ══ STEP 2 – NETWORKING ══════════════════════════════════════════════ -->
 <div class="card" id="s2">
   <div class="vtag">_02 / networking</div>
@@ -434,7 +437,7 @@ textarea:focus{color:var(--white)}
     <button class="btn btn-next" onclick="go(3)">Avanti →</button>
   </div>
 </div>
- 
+
 <!-- ══ STEP 3 – VMS ══════════════════════════════════════════════════════ -->
 <div class="card" id="s3">
   <div class="vtag">_03 / security — videosorveglianza & VMS</div>
@@ -545,7 +548,7 @@ textarea:focus{color:var(--white)}
     <button class="btn btn-next" onclick="go(4)">Avanti →</button>
   </div>
 </div>
- 
+
 <!-- ══ STEP 4 – CONTROLLO ACCESSI ══════════════════════════════════════ -->
 <div class="card" id="s4">
   <div class="vtag">_04 / security — controllo accessi</div>
@@ -632,14 +635,14 @@ textarea:focus{color:var(--white)}
     <button class="btn btn-next" onclick="go(5)">Avanti →</button>
   </div>
 </div>
- 
+
 <!-- ══ STEP 5 – AUDIO VIDEO + GOVERNANCE ════════════════════════════════ -->
 <div class="card" id="s5">
   <div class="vtag">_05 / audio video, UC e governance</div>
   <div class="ctitle">Ecosistema AV, VC<br>e <strong>processi NIS 2</strong></div>
   <div class="csub">Art. 24 D.Lgs. 138/2024 — AV over IP, videoconferenza, digital signage, sale riunioni, backup, incidenti, formazione, crittografia, supply chain e responsabilità del CDA.</div>
   <div class="hrule"></div>
- 
+
   <div class="fg">
     <div class="flabel">Sistemi AV / UC presenti</div>
     <div class="chips">
@@ -698,9 +701,9 @@ textarea:focus{color:var(--white)}
       <label class="ri" onclick="pick('vcenc','na')"><input type="radio" name="vcenc" value="na"><div class="dot"></div>Non applicabile — nessun sistema VC</label>
     </div>
   </div>
- 
+
   <div class="sdiv"><div class="sdiv-title">_governance e processi — Art. 24 D.Lgs. 138/2024</div></div>
- 
+
   <div class="fg">
     <div class="flabel">Backup e disaster recovery <span style="color:var(--green);font-size:9px;letter-spacing:1px">· Art. 24 lett. c</span></div>
     <div class="rg">
@@ -764,7 +767,7 @@ textarea:focus{color:var(--white)}
     <button class="btn btn-go" onclick="runAnalysis()">_genera report NIS 2</button>
   </div>
 </div>
- 
+
 <!-- ══ RESULTS (SCREEN) ═════════════════════════════════════════════════ -->
 <div id="results">
   <div class="res-tag">_report nis 2 assessment</div>
@@ -784,7 +787,7 @@ textarea:focus{color:var(--white)}
   <div class="vsec" id="sec-gov" style="display:none"><div class="vsec-header" style="color:var(--dim)">_governance & processi</div><div id="g-gov"></div></div>
   <div class="nbox"><div class="nbox-tag">_prossimi passi con Kaplet</div><div class="nbox-body" id="rNext"></div></div>
   <div class="proposta-box"><div class="proposta-tag">_pacchetto consigliato</div><div id="rProposta"></div></div>
- 
+
   <!-- PDF BUTTON -->
   <div class="pdf-btn-wrap">
     <button class="btn-pdf" onclick="stampaPDF()">
@@ -800,14 +803,14 @@ textarea:focus{color:var(--white)}
     <button class="btn-reset" onclick="resetAll()">↩ Nuova analisi</button>
   </div>
 </div>
- 
+
 </div><!-- /wrap -->
- 
+
 <!-- ══ PRINT REPORT (solo per stampa/PDF) ═══════════════════════════════ -->
 <div id="printReport">
   <div class="pr-header">
     <div>
-      <div class="pr-logo">·KAPLET</div>
+      <img class="pr-logo-img" src="data:image/png;base64,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" alt="Kaplet">
       <div style="font-size:8.5pt;color:#666;margin-top:3pt">NIS 2 Assessment Report</div>
     </div>
     <div class="pr-meta">
@@ -816,44 +819,44 @@ textarea:focus{color:var(--white)}
       <div>kaplet.it</div>
     </div>
   </div>
- 
+
   <div id="pr-badge-wrap"></div>
   <div class="pr-desc" id="pr-desc"></div>
- 
+
   <div class="pr-scores">
     <div class="pr-score r"><div class="pr-score-n" id="pr-crit">0</div><div class="pr-score-l">Criticità</div></div>
     <div class="pr-score y"><div class="pr-score-n" id="pr-warn">0</div><div class="pr-score-l">Attenzione</div></div>
     <div class="pr-score g"><div class="pr-score-n" id="pr-ok">0</div><div class="pr-score-l">Conformi</div></div>
   </div>
- 
+
   <div id="pr-gaps"></div>
- 
+
   <div class="pr-nbox" id="pr-nbox" style="display:none">
     <div class="pr-nbox-tag">_prossimi passi con Kaplet</div>
     <div class="pr-nbox-body" id="pr-next"></div>
   </div>
- 
+
   <div class="pr-proposta" id="pr-proposta" style="display:none">
     <div class="pr-proposta-tag">_pacchetto consigliato</div>
     <div id="pr-pack-content"></div>
   </div>
- 
+
   <div class="pr-footer">
-    <div>·KAPLET – Cesena / Milano – kaplet.it</div>
+    <div><img class="pr-footer-logo" src="data:image/png;base64,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" alt="Kaplet"> Cesena / Milano – kaplet.it</div>
     <div>D.Lgs. 138/2024 – Direttiva (UE) 2022/2555 – Documento riservato</div>
   </div>
 </div>
- 
+
 <script>
 // ── STATE ──────────────────────────────────────────────────────────────────
 let cur = 1;
 const TOTAL = 5;
 const STEP_LABELS = ['_anagrafica','_networking','_security VMS','_ctrl accessi','_audio video'];
- 
+
 // Store last analysis result for PDF
 let lastResult = null;
 let lastData = null;
- 
+
 // ── PROGRESS ───────────────────────────────────────────────────────────────
 function renderProg() {
   document.getElementById('progSteps').innerHTML = STEP_LABELS.map((l, i) => {
@@ -862,7 +865,7 @@ function renderProg() {
     return `<div class="prog-step ${cls}"><span class="sn">${n}</span>${l}</div>`;
   }).join('');
 }
- 
+
 function go(n) {
   document.getElementById('s' + cur).classList.remove('on');
   cur = n;
@@ -872,7 +875,7 @@ function go(n) {
   renderProg();
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
- 
+
 // ── RADIO ──────────────────────────────────────────────────────────────────
 function pick(name, val) {
   document.querySelectorAll(`input[name="${name}"]`).forEach(el => {
@@ -881,12 +884,12 @@ function pick(name, val) {
   const t = document.querySelector(`input[name="${name}"][value="${val}"]`);
   if (t) t.closest('.ri').classList.add('s');
 }
- 
+
 function gv(name) {
   const el = document.querySelector(`.ri.s input[name="${name}"]`);
   return el ? el.value : null;
 }
- 
+
 // ── CHIPS ──────────────────────────────────────────────────────────────────
 const chipState = {};
 function toggleChip(el, key) {
@@ -894,13 +897,13 @@ function toggleChip(el, key) {
   el.classList.toggle('s', chipState[key]);
 }
 function hasChip(key) { return !!chipState[key]; }
- 
+
 // ── SHOW/HIDE ──────────────────────────────────────────────────────────────
 function showEl(id, show) {
   const el = document.getElementById(id);
   if (el) el.style.display = show ? '' : 'none';
 }
- 
+
 // ── FILENAME BUILDER ────────────────────────────────────────────────────────
 function buildFilename(company) {
   const clean = (company || 'Cliente')
@@ -913,30 +916,30 @@ function buildFilename(company) {
     String(today.getDate()).padStart(2, '0');
   return 'Kaplet_NIS2_' + clean + '_' + dateStr;
 }
- 
+
 // ── PDF PRINT ───────────────────────────────────────────────────────────────
 function stampaPDF() {
   if (!lastResult || !lastData) return;
- 
+
   const filename = buildFilename(lastData.company);
   document.title = filename;
- 
+
   // Populate print report
   const today = new Date().toLocaleDateString('it-IT', {day:'2-digit', month:'2-digit', year:'numeric'});
   document.getElementById('pr-date').textContent = today;
   document.getElementById('pr-agent').textContent = lastData.agent || '';
- 
+
   // Badge
   const bMap = {essential:'ess', important:'imp', verify:'ver', outside:'out'};
   document.getElementById('pr-badge-wrap').innerHTML =
     `<div class="pr-badge ${bMap[lastResult.cls] || 'out'}">${lastResult.badge}</div>` +
     `<div style="font-size:9pt;color:#555;margin-top:4pt;margin-bottom:12pt">${lastResult.company}</div>`;
- 
+
   document.getElementById('pr-desc').textContent = lastResult.desc;
   document.getElementById('pr-crit').textContent = lastResult.nCrit;
   document.getElementById('pr-warn').textContent = lastResult.nWarn;
   document.getElementById('pr-ok').textContent = lastResult.nOk;
- 
+
   // Build gap HTML for print
   const prioMapPr = {
     crit: {cls:'r', label:'CRITICO'},
@@ -944,7 +947,7 @@ function stampaPDF() {
     info: {cls:'b', label:'MEDIO'},
     ok:   {cls:'g', label:'OK'}
   };
- 
+
   const secsPr = [
     {id:'sec-net', label:'_networking', cls:'b', gaps: lastResult.netGaps},
     {id:'sec-vms', label:'_security — videosorveglianza & VMS', cls:'r', gaps: lastResult.vmsGaps},
@@ -952,7 +955,7 @@ function stampaPDF() {
     {id:'sec-av',  label:'_audio video & unified communication', cls:'g', gaps: lastResult.avGaps},
     {id:'sec-gov', label:'_governance & processi', cls:'d', gaps: lastResult.govGaps},
   ];
- 
+
   let gapsHtml = '';
   secsPr.forEach(sec => {
     if (!sec.gaps || !sec.gaps.length) return;
@@ -972,14 +975,14 @@ function stampaPDF() {
     });
   });
   document.getElementById('pr-gaps').innerHTML = gapsHtml;
- 
+
   // Next steps
   const nextEl = document.getElementById('pr-next');
   if (lastResult.next) {
     nextEl.textContent = lastResult.next;
     document.getElementById('pr-nbox').style.display = '';
   }
- 
+
   // Proposta
   if (lastResult.pacchetto) {
     const colMap = {'NIS 2 Complete':'r','NIS 2 Essential':'y','NIS 2 Starter':'b','NIS 2 Managed':'g'};
@@ -993,11 +996,11 @@ function stampaPDF() {
     document.getElementById('pr-pack-content').innerHTML = packHtml;
     document.getElementById('pr-proposta').style.display = '';
   }
- 
+
   // Print
   window.print();
 }
- 
+
 // ── ANALYSIS ENGINE ────────────────────────────────────────────────────────
 function runAnalysis() {
   const d = {
@@ -1017,15 +1020,15 @@ function runAnalysis() {
     training: gv('training'), crypto: gv('crypto'),
     supplychain: gv('supplychain'), cda: gv('cda'),
   };
- 
+
   lastData = d;
- 
+
   // ── NIS2 CLASSIFICATION ────────────────────────────────────────────────
   const ESS = ['energy','transport','banking','health','water_d','water_w','digital','ict','space','pa_c'];
   const IMP = ['postal','waste','chem','food','med','it_mfg','elec','auto','dig_mkt','research','pa_l'];
   const medPlus = ['medium','large'].includes(d.emp);
   const highRev = d.rev === 'high';
- 
+
   let cls = 'outside', badge = '', desc = '';
   if (ESS.includes(d.sector) && (medPlus || highRev)) {
     cls='essential'; badge='🔴 Soggetto Essenziale — NIS 2 obbligatoria';
@@ -1043,160 +1046,160 @@ function runAnalysis() {
     cls='outside'; badge='🟢 Settore non soggetto a NIS 2';
     desc="Il settore di questa azienda non \u00e8 tra quelli obbligati dalla NIS 2 (Allegati I e II, D.Lgs. 138/2024). Non ci sono obblighi diretti. Se l\u2019azienda per\u00f2 lavora come fornitrice di soggetti NIS 2, potrebbe ricevere richieste di adeguamento nell\u2019ambito della loro supply chain.";
   }
- 
+
   const bMap = {essential:'b-ess', important:'b-imp', verify:'b-ver', outside:'b-out'};
- 
+
   // ── GAP COLLECTIONS ────────────────────────────────────────────────────
   const netGaps=[], vmsGaps=[], acsGaps=[], avGaps=[], govGaps=[];
- 
+
   function gap(arr, prio, title, desc, art, action='') {
     arr.push({prio, title, desc, art, action});
   }
- 
+
   // NETWORKING
   if (!d.fw||d.fw==='none') gap(netGaps,'crit','Nessun firewall perimetrale','Qualsiasi dispositivo in rete (telecamera, switch, NVR, player signage) \u00e8 raggiungibile dall\u2019esterno senza filtro. Vulnerabilit\u00e0 assoluta.','Art. 24 \u2014 sicurezza reti e sistemi informativi','\u2192 Kaplet: installazione NGFW urgente + progetto segmentazione rete.');
   else if (d.fw==='basic') gap(netGaps,'warn','Firewall base senza IPS/IDS attivo','Un UTM datato non rileva ransomware, C2 traffic o lateral movement. Aggiornare a NGFW con IPS.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: upgrade a NGFW con IPS e log management.');
   else if (d.fw==='ngfw') gap(netGaps,'ok','NGFW con IPS/IDS presente','Buona base. Verificare aggiornamento automatico firme e log retention 12+ mesi.','Art. 24 \u2014 conforme');
   else gap(netGaps,'ok','Firewall gestito (managed service)','Ottima configurazione. Assicurarsi di ricevere report periodici dal provider.','Art. 24 \u2014 conforme');
- 
+
   if (!d.vlan||d.vlan==='none') gap(netGaps,'crit','Rete piatta \u2014 nessuna segmentazione VLAN','Una telecamera o un device AV compromesso pu\u00f2 raggiungere direttamente i server aziendali. I sistemi di impianto devono essere isolati dalla rete dati.','Art. 24 \u2014 protezione sistemi e rete','\u2192 Kaplet: progetto VLAN dedicata per VMS, ACS, AV, IoT, dati, management.');
   else if (d.vlan==='partial') gap(netGaps,'warn','Segmentazione VLAN parziale','Completare includendo tutti i verticali: VMS, ACS, AV, IoT. Verificare ACL restrittivi tra segmenti.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: audit VLAN esistente + completamento segmentazione.');
   else gap(netGaps,'ok','Segmentazione di rete presente','Conforme. Revisionare le ACL ogni 6 mesi.','Art. 24 \u2014 conforme');
- 
+
   if (d.remote==='open') gap(netGaps,'crit','RDP/VNC esposto su internet','Causa primaria #1 di ransomware. Bot automatizzati scansionano la porta 3389 continuamente. Da chiudere immediatamente.','Art. 24 \u2014 autenticazione e controllo accessi','\u2192 Kaplet: blocco immediato + VPN con MFA. Priorit\u00e0 assoluta.');
   else if (d.remote==='vpn') gap(netGaps,'crit','VPN senza MFA','Credenziali VPN rubate via phishing danno accesso diretto alla rete. Art. 24 comma 2 lett. i richiede esplicitamente l\u2019MFA.','Art. 24 comma 2 lett. i \u2014 MFA obbligatorio','\u2192 Kaplet: abilitazione MFA sulla VPN esistente (TOTP, certificati, token).');
   else if (d.remote==='vpn_mfa') gap(netGaps,'ok','VPN con MFA attiva','Conforme Art. 24. Valutare evoluzione verso ZTNA per postura zero trust completa.','Art. 24 \u2014 conforme');
   else gap(netGaps,'ok','ZTNA / Zero Trust Network Access','Eccellente postura. Verificare policy di accesso revisionate periodicamente.','Art. 24 \u2014 conforme');
- 
+
   if (!d.inv||d.inv==='none') gap(netGaps,'crit','Nessun inventario asset di rete','Non si pu\u00f2 proteggere ci\u00f2 che non si conosce. NIS 2 richiede inventario aggiornato di tutti i sistemi inclusi i device di impianto.','Art. 24 \u2014 gestione asset','\u2192 Kaplet: discovery network + inventario asset completo (rete, VMS, ACS, AV).');
   else if (d.inv==='manual') gap(netGaps,'warn','Inventario manuale non aggiornato','Automatizzare con NAC o IPAM per visibilit\u00e0 in tempo reale di tutti i device connessi.','Art. 24 \u2014 gestione asset','\u2192 Kaplet: implementazione NAC o discovery automatico.');
   else gap(netGaps,'ok','Inventario asset presente e aggiornato','Conforme. Estendere il perimetro a tutti i device di impianto.','Art. 24 \u2014 conforme');
- 
+
   if (!d.log||d.log==='none') gap(netGaps,'crit','Nessun sistema di logging','Senza log \u00e8 impossibile notificare il CSIRT Italia entro 24h (obbligo dal 1° gen 2026) e condurre analisi forense.','Art. 25-26 \u2014 notifica CSIRT Italia','\u2192 Kaplet: syslog server + log retention 12 mesi. Valutare SIEM as a Service dal DOC.');
   else if (d.log==='local') gap(netGaps,'warn','Log locali con retention insufficiente','Centralizzare su sistema separato con retention 12+ mesi. I log locali possono essere cancellati da un attaccante.','Art. 25 \u2014 gestione incidenti','\u2192 Kaplet: centralizzazione log + retention 12 mesi.');
   else if (d.log==='central') gap(netGaps,'ok','Log centralizzati con retention adeguata','Conforme. Valutare alerting automatico per eventi anomali.','Art. 25 \u2014 conforme');
   else gap(netGaps,'ok','SIEM con alerting e correlazione eventi','Ottima postura. Verificare tempi di risposta compatibili con notifica CSIRT entro 24h.','Art. 25-26 \u2014 conforme');
- 
+
   if (!d.patch_net||d.patch_net==='none') gap(netGaps,'crit','Nessun patch management infrastruttura','Switch, AP, firewall non aggiornati hanno CVE sfruttate attivamente. Il 60% delle violazioni usa vulnerabilit\u00e0 con patch disponibile.','Art. 24 \u2014 vulnerability management','\u2192 Kaplet: inventory + vulnerability scan + definizione patch cycle.');
   else if (d.patch_net==='manual') gap(netGaps,'warn','Aggiornamenti manuali e sporadici','Strutturare un patch cycle formale includendo tutti i device di impianto: NVR, switch, AP, firewall.','Art. 24 \u2014 vulnerability management','\u2192 Kaplet: patch cycle documentato + strumento di scanning.');
   else gap(netGaps,'ok','Patch management strutturato','Conforme. Includere nel perimetro i device di impianto: telecamere, NVR, switch PoE.','Art. 24 \u2014 conforme');
- 
+
   // VMS
   if (d.hasVms==='yes') {
     if (!d.firm||d.firm==='unknown'||d.firm==='old') gap(vmsGaps,'crit','Firmware telecamere/NVR/encoder non aggiornato','Le CVE su IP cam sono pubbliche su NVD e sfruttate da bot automatizzati. Firmware non aggiornato = backdoor documentata.','Art. 24 \u2014 vulnerability management','\u2192 Kaplet: inventario firmware completo + piano aggiornamenti + iscrizione advisory vendor.');
     else gap(vmsGaps,'ok','Firmware VMS aggiornato','Mantenere il ciclo e iscriversi agli advisory: Axis Security Notifications, Bosch PSIRT, Avigilon Bulletins.','Art. 24 \u2014 conforme');
- 
+
     if (d.vcreds==='default') gap(vmsGaps,'crit','Credenziali default attive (admin/admin, 12345\u2026)','Questi device sono visibili su Shodan e attaccati ogni ora automaticamente. Gap #1 da correggere prima di qualsiasi altra misura.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: audit credenziali completo + reset con password policy su ogni device.');
     else if (d.vcreds==='shared') gap(vmsGaps,'warn','Password condivise tra operatori VMS','Nessuna accountability. Creare account nominali con profilo minimo per ogni operatore.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: account nominali VMS + revisione profili di accesso.');
     else if (d.vcreds==='personal') gap(vmsGaps,'info','Account nominali VMS senza MFA','Per accesso remoto, MFA \u00e8 fortemente consigliata. Disponibile in Axis, Avigilon, Milestone, Genetec.','Art. 24 \u2014 autenticazione','\u2192 Kaplet: abilitazione MFA sul VMS (verifica disponibilit\u00e0 per il vendor in uso).');
     else gap(vmsGaps,'ok','Account nominali con MFA sul VMS','Ottima configurazione. Verificare log accessi centralizzati e revisione profili ogni 6 mesi.','Art. 24 \u2014 conforme');
- 
+
     if (d.vexp==='direct') gap(vmsGaps,'crit','VMS esposto direttamente su internet','Port forwarding e DDNS: il VMS \u00e8 scansionato da Shodan ogni ora. Rimuovere immediatamente il port forwarding.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: rimozione port forwarding + VPN con MFA per accesso remoto VMS. Urgente.');
     else if (d.vexp==='cloud') gap(vmsGaps,'info','Accesso VMS tramite cloud vendor','Verificare: cifratura, log accessi, localizzazione dati UE, SLA del vendor. Inserire nella supply chain security review NIS 2.','Art. 24 \u2014 supply chain','\u2192 Kaplet: verifica contrattuale e tecnica del cloud vendor VMS.');
     else if (d.vexp==='vpn') gap(vmsGaps,'ok','Accesso remoto VMS solo tramite VPN','Conforme. Verificare MFA sulla VPN e log di accesso al VMS da remoto.','Art. 24 \u2014 conforme');
     else gap(vmsGaps,'ok','VMS non accessibile da remoto','Ottima postura. Verificare che non esistano accessi non documentati.','Art. 24 \u2014 conforme');
- 
+
     if (d.vtech==='uncontrolled') gap(vmsGaps,'crit','Accesso tecnici/manutentori non controllato','I fornitori con accesso non controllato sono un vettore di attacco supply chain. Ogni accesso deve essere tracciato e temporaneo.','Art. 24 \u2014 supply chain e controllo accessi','\u2192 Kaplet: credenziali temporanee + log accessi manutentori VMS.');
     else if (d.vtech==='shared') gap(vmsGaps,'warn','Credenziali condivise con i tecnici','Creare account nominali per ogni fornitore con scadenza automatica. Revocare al cambio fornitore.','Art. 24 \u2014 supply chain','\u2192 Kaplet: account nominali fornitori + procedura revoca.');
     else gap(vmsGaps,'ok','Accesso tecnici tracciato e controllato','Conforme. Includere i log di accesso fornitori nel sistema centralizzato.','Art. 24 \u2014 conforme');
- 
+
     if (!d.vlog||d.vlog==='none') gap(vmsGaps,'warn','Nessun log accessi al VMS','Senza audit trail non \u00e8 possibile sapere chi ha acceduto o modificato impostazioni. Necessario per la notifica CSIRT.','Art. 25 \u2014 notifica incidenti','\u2192 Kaplet: attivazione log accessi VMS + centralizzazione syslog.');
     else if (d.vlog==='local') gap(vmsGaps,'info','Log VMS locali con retention breve','Centralizzare su syslog esterno: se il VMS viene compromesso, i log locali vengono persi.','Art. 25 \u2014 gestione incidenti','\u2192 Kaplet: configurazione syslog output VMS verso sistema centralizzato.');
     else gap(vmsGaps,'ok','Log VMS adeguati','Conforme. Verificare che i log includano: accessi operatori, export video, modifiche configurazione.','Art. 25 \u2014 conforme');
- 
+
     if (d.vloc==='exposed') gap(vmsGaps,'warn','Server VMS/NVR fisicamente non protetto','Un accesso fisico non autorizzato al server VMS compromette l\u2019intero impianto. Collocare in area protetta.','Art. 24 \u2014 sicurezza fisica','\u2192 Kaplet: valutazione sicurezza fisica sala server/rack VMS.');
     else gap(vmsGaps,'ok','Server VMS/NVR in area protetta','Conforme per la parte di sicurezza fisica.','Art. 24 \u2014 conforme');
   }
- 
+
   // ACS
   if (d.hasAcs==='yes') {
     if (d.acreds==='no_policy') gap(acsGaps,'crit','Badge mai revocati \u2014 nessuna policy di offboarding','Badge attivi di ex dipendenti e fornitori sono accessi fisici non controllati agli edifici.','Art. 24 \u2014 sicurezza risorse umane e controllo accessi','\u2192 Kaplet: audit badge attivi + procedura offboarding formale con revoca immediata.');
     else if (d.acreds==='manual') gap(acsGaps,'warn','Revoca badge manuale e irregolare','Strutturare una procedura di offboarding con revoca badge il giorno di uscita.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: formalizzazione procedura + valutazione integrazione ACS\u2194HR/AD.');
     else if (d.acreds==='process') gap(acsGaps,'ok','Procedura offboarding definita','Conforme. Valutare automazione tramite integrazione con Active Directory o sistema HR.','Art. 24 \u2014 conforme');
     else gap(acsGaps,'ok','Offboarding automatizzato \u2014 ACS integrato con HR/AD','Ottima postura. Verificare la sincronizzazione con audit periodici.','Art. 24 \u2014 conforme');
- 
+
     if (d.asoft==='default') gap(acsGaps,'crit','Credenziali default sul software ACS','L\u2019interfaccia ACS con credenziali default consente di disabilitare interi impianti da remoto.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: audit credenziali ACS + reset immediato con password policy.');
     else if (d.asoft==='personal') gap(acsGaps,'warn','Account nominali ACS senza MFA','MFA consigliata sull\u2019accesso alla piattaforma ACS, specialmente se accessibile da remoto.','Art. 24 \u2014 autenticazione','\u2192 Kaplet: verifica disponibilit\u00e0 MFA sul software ACS in uso.');
     else gap(acsGaps,'ok','Accesso ACS con account nominali e MFA','Conforme. Verificare RBAC e revisione periodica dei profili.','Art. 24 \u2014 conforme');
- 
+
     if (d.aexp==='direct') gap(acsGaps,'crit','Software ACS esposto su internet','La compromissione consente di aprire varchi e disabilitare allarmi da remoto.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: messa in sicurezza immediata + VPN per accesso remoto ACS.');
     else if (d.aexp==='cloud') gap(acsGaps,'info','ACS su piattaforma cloud vendor','Verificare politiche di sicurezza del vendor, localizzazione dati UE, SLA, log disponibili.','Art. 24 \u2014 supply chain','\u2192 Kaplet: verifica contrattuale e tecnica del cloud vendor ACS.');
     else gap(acsGaps,'ok','Accesso remoto ACS protetto','Conforme. Verificare log di accesso remoto centralizzati.','Art. 24 \u2014 conforme');
- 
+
     if (!d.afirm||d.afirm==='unknown'||d.afirm==='old') gap(acsGaps,'warn','Firmware centraline e lettori non aggiornato','CVE su lettori badge sono documentate. Firmware non aggiornato pu\u00f2 consentire accesso fisico non autorizzato.','Art. 24 \u2014 vulnerability management','\u2192 Kaplet: inventario firmware ACS + piano aggiornamenti centraline e lettori.');
     else gap(acsGaps,'ok','Firmware ACS aggiornato','Conforme. Includere i lettori nel patch cycle documentato.','Art. 24 \u2014 conforme');
- 
+
     if (!d.alog||d.alog==='none') gap(acsGaps,'warn','Nessun log eventi ACS','Senza log degli accessi fisici \u00e8 impossibile ricostruire cosa \u00e8 successo in caso di incidente.','Art. 25 \u2014 gestione incidenti','\u2192 Kaplet: attivazione log ACS + centralizzazione SIEM.');
     else if (d.alog==='local') gap(acsGaps,'info','Log ACS locali con retention breve','Centralizzare i log ACS per includerli nell\u2019analisi forense post-incidente.','Art. 25 \u2014 incidenti','\u2192 Kaplet: export log ACS verso sistema centralizzato.');
     else gap(acsGaps,'ok','Log ACS adeguati e centralizzati','Conforme. Verificare correlazione con log VMS per visione completa degli eventi.','Art. 24-25 \u2014 conforme');
- 
+
     if (d.aint==='none') gap(acsGaps,'info','ACS e VMS non integrati','L\u2019integrazione ACS\u2194VMS consente correlazione eventi (badge + video) per risposta agli incidenti molto pi\u00f9 efficace.','Art. 24-25 \u2014 raccomandazione','\u2192 Kaplet: valutazione integrazione ACS\u2194VMS per correlazione eventi.');
   }
- 
+
   // AV
   const hasAv = hasChip('av_aovip')||hasChip('av_signage')||hasChip('av_vc')||hasChip('av_ctrl')||hasChip('av_kvm')||hasChip('av_wall')||hasChip('av_uc');
   if (hasAv) {
     if (d.avcreds==='default') gap(avGaps,'crit','Credenziali default sui dispositivi AV/VC','Codec VC, player signage, controller sala con credenziali default sono vulnerabili e accessibili da rete.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: audit credenziali AV/VC + reset con password policy su ogni device.');
     else if (d.avcreds==='shared') gap(avGaps,'warn','Password condivise su dispositivi AV','Creare account nominali per ogni amministratore AV.','Art. 24 \u2014 controllo accessi','\u2192 Kaplet: account nominali AV + rotazione password.');
     else gap(avGaps,'ok','Credenziali AV gestite correttamente','Conforme. Includere i device AV nella revisione periodica.','Art. 24 \u2014 conforme');
- 
+
     if (!d.avfirm||d.avfirm==='unknown'||d.avfirm==='old') gap(avGaps,'warn','Firmware dispositivi AV non aggiornato','Codec Cisco, Poly, Neat, controller Crestron, player signage: tutti hanno CVE documentate.','Art. 24 \u2014 vulnerability management','\u2192 Kaplet: inventario firmware AV + piano aggiornamenti periodici.');
     else gap(avGaps,'ok','Firmware AV aggiornato','Conforme. Mantenere il patch cycle includendo i device AV.','Art. 24 \u2014 conforme');
- 
+
     if (d.avnet==='flat') gap(avGaps,'warn','Dispositivi AV sulla stessa rete dei PC','Un player signage o codec VC compromesso pu\u00f2 effettuare network scanning verso i server. Creare VLAN AV dedicata.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: VLAN AV dedicata + ACL verso rete dati.');
     else if (d.avnet==='partial') gap(avGaps,'info','Rete AV parzialmente separata','Completare con VLAN AV dedicata e ACL chiari.','Art. 24 \u2014 sicurezza reti','\u2192 Kaplet: completamento segmentazione VLAN AV.');
     else gap(avGaps,'ok','VLAN AV dedicata e segmentata','Conforme. Verificare ACL tra VLAN AV e altre reti.','Art. 24 \u2014 conforme');
- 
+
     if (d.avremote==='open') gap(avGaps,'warn','Accesso remoto AV non controllato','I fornitori AV con accesso non controllato possono accedere a device connessi alla rete.','Art. 24 \u2014 supply chain','\u2192 Kaplet: implementazione accesso remoto controllato per manutentori AV.');
     else gap(avGaps,'ok','Accesso remoto AV controllato','Conforme. Verificare log degli accessi dei manutentori AV.','Art. 24 \u2014 conforme');
- 
+
     if ((hasChip('av_vc')||hasChip('av_uc')) && d.vcenc==='no') gap(avGaps,'warn','Comunicazioni VC non cifrate','Le riunioni non cifrate possono essere intercettate. NIS 2 richiede uso appropriato della crittografia.','Art. 24 comma 2 lett. h \u2014 crittografia','\u2192 Kaplet: verifica cifratura end-to-end sui sistemi VC in uso.');
     else if ((hasChip('av_vc')||hasChip('av_uc')) && d.vcenc==='yes') gap(avGaps,'ok','Comunicazioni VC con cifratura E2E','Conforme Art. 24 comma 2 lett. h.','Art. 24 \u2014 conforme');
   }
- 
+
   // GOVERNANCE (backup, incident, + 4 nuovi)
   if (!d.backup||d.backup==='none') gap(govGaps,'crit','Nessun backup','Ransomware senza backup = perdita totale dati + interruzione servizio. Art. 24 richiede backup, DR e gestione crisi come misura minima.','Art. 24 comma 2 lett. c \u2014 continuit\u00e0 operativa, backup, DR','\u2192 Kaplet: strategia backup 3-2-1 + primo test di ripristino.');
   else if (d.backup==='local') gap(govGaps,'warn','Backup solo locale \u2014 non testato','I backup locali vengono cifrati dal ransomware. Necessario offsite/cloud + test semestrale.','Art. 24 \u2014 continuit\u00e0 operativa','\u2192 Kaplet: backup offsite + piano test ripristino.');
   else if (d.backup==='offsite') gap(govGaps,'info','Backup offsite senza DR plan documentato','Il backup esiste ma manca un DR plan con RTO/RPO definiti e testati.','Art. 24 \u2014 DR e gestione crisi','\u2192 Kaplet: stesura DR plan + tabletop exercise.');
   else gap(govGaps,'ok','Backup + DR plan documentato e testato','Conforme Art. 24.','Art. 24 \u2014 conforme');
- 
+
   if (!d.incident||d.incident==='none') gap(govGaps,'crit','Nessuna procedura di gestione incidenti','Dal 1° gennaio 2026 NIS 2 impone pre-notifica CSIRT Italia entro 24h. Senza IRP la notifica \u00e8 impossibile.','Art. 25-26 D.Lgs. 138/2024 \u2014 notifica obbligatoria CSIRT Italia','\u2192 Kaplet: stesura IRP base + designazione Referente CSIRT (scadenza 31/12/2025).');
   else if (d.incident==='informal') gap(govGaps,'warn','Gestione incidenti informale','Formalizzare con: ruoli, escalation, template notifica ACN/CSIRT.','Art. 25 \u2014 notifica CSIRT entro 24h','\u2192 Kaplet: formalizzazione IRP + workshop referente CSIRT.');
   else if (d.incident==='irp') gap(govGaps,'info','IRP documentato \u2014 referente CSIRT non designato','Il D.Lgs. 138/2024 richiede designazione formale del referente entro 31/12/2025.','Art. 25 \u2014 designazione referente','\u2192 Designare il referente CSIRT e aggiornare la registrazione ACN.');
   else gap(govGaps,'ok','IRP + referente CSIRT designato','Conforme Art. 25-26. Eseguire tabletop exercise periodiche.','Art. 25-26 \u2014 conforme');
- 
+
   // Formazione — Art. 24 lett. g
   if (!d.training||d.training==='none') gap(govGaps,'warn','Nessuna formazione cybersecurity del personale','Il fattore umano causa il 70%+ degli incidenti. NIS 2 richiede esplicitamente pratiche di igiene informatica e formazione continua.','Art. 24 comma 2 lett. g \u2014 igiene informatica e formazione','\u2192 Kaplet: piano formativo NIS 2 awareness + phishing simulation.');
   else if (d.training==='occasional') gap(govGaps,'info','Formazione occasionale e non strutturata','Strutturare un piano annuale con attestati di partecipazione da esibire ad ACN.','Art. 24 \u2014 formazione','\u2192 Kaplet: piano formativo annuale con attestati e documentazione compliance.');
   else gap(govGaps,'ok','Formazione cybersecurity strutturata','Conforme Art. 24 lett. g.','Art. 24 lett. g \u2014 conforme');
- 
+
   // Crittografia — Art. 24 lett. h
   if (!d.crypto||d.crypto==='none') gap(govGaps,'crit','Nessuna cifratura \u2014 dati in chiaro','Dati trasmessi e archiviati in chiaro sono intercettabili. NIS 2 richiede uso appropriato della crittografia come misura minima.','Art. 24 comma 2 lett. h \u2014 crittografia','\u2192 Kaplet: TLS su tutti i flussi + cifratura storage NVR, server VMS e ACS.');
   else if (d.crypto==='partial') gap(govGaps,'warn','Cifratura solo parziale','Cifrare anche i dati a riposo: storage NVR, server VMS, database ACS, backup.','Art. 24 lett. h \u2014 crittografia','\u2192 Kaplet: estensione cifratura a dati a riposo su tutti i sistemi di impianto.');
   else if (d.crypto==='transit') gap(govGaps,'info','Dati in transito cifrati, dati a riposo no','Aggiungere cifratura storage per registrazioni VMS, database ACS e backup.','Art. 24 lett. h \u2014 crittografia','\u2192 Kaplet: cifratura disco NVR/server VMS + verifica backup cifrati.');
   else gap(govGaps,'ok','Cifratura completa in transito e a riposo','Conforme Art. 24 comma 2 lett. h.','Art. 24 lett. h \u2014 conforme');
- 
+
   // Supply chain — Art. 24 lett. d
   if (!d.supplychain||d.supplychain==='none') gap(govGaps,'warn','Fornitori ICT e di impianto non valutati','Chi gestisce il VMS da remoto, chi aggiorna il firmware, chi mantiene le centraline ACS: tutti potenziali vettori di attacco supply chain.','Art. 24 comma 2 lett. d \u2014 sicurezza supply chain','\u2192 Kaplet: questionario sicurezza fornitori chiave + clausole contrattuali NIS 2.');
   else if (d.supplychain==='contract') gap(govGaps,'info','Solo clausole contrattuali generiche','Raccogliere evidenze concrete: certificazioni ISO 27001, SOC 2, questionari specifici.','Art. 24 lett. d \u2014 supply chain','\u2192 Kaplet: implementazione questionario tecnico fornitori + raccolta evidenze.');
   else gap(govGaps,'ok','Valutazione fornitori strutturata','Conforme Art. 24 lett. d. Aggiornare le valutazioni ad ogni cambio fornitore critico.','Art. 24 lett. d \u2014 conforme');
- 
+
   // CDA — Art. 23
   if (!d.cda||d.cda==='unaware') gap(govGaps,'crit','CDA non informato \u2014 responsabilit\u00e0 personale a rischio','Art. 23 D.Lgs. 138/2024: responsabilit\u00e0 diretta e personale degli organi di amministrazione. Un CDA non informato \u00e8 gi\u00e0 inadempiente.','Art. 23 D.Lgs. 138/2024 \u2014 responsabilit\u00e0 personale organi direttivi','\u2192 Kaplet: briefing urgente al CDA sugli obblighi NIS 2 e le responsabilit\u00e0 personali degli amministratori.');
   else if (d.cda==='partial') gap(govGaps,'warn','CDA informato ma senza piano approvato formalmente','Art. 23 richiede supervisione attiva. Serve un piano formalmente approvato dal CDA.','Art. 23 \u2014 responsabilit\u00e0 organi direttivi','\u2192 Kaplet: supporto nella predisposizione del piano NIS 2 da portare in approvazione al CDA.');
   else if (d.cda==='approved') gap(govGaps,'ok','CDA ha approvato formalmente il piano NIS 2','Buona postura governance. Documentare i verbali e prevedere reporting periodico.','Art. 23 \u2014 conforme');
   else gap(govGaps,'ok',"CDA supervisiona attivamente l\u2019implementazione NIS 2",'Ottima governance. Conforme Art. 23. Documentare i verbali delle riunioni dove NIS 2 \u00e8 trattato.','Art. 23 \u2014 conforme');
- 
+
   // ── RENDER SCREEN ────────────────────────────────────────────────────
   document.getElementById('progWrap').style.display = 'none';
   document.getElementById('s5').classList.remove('on');
   document.getElementById('results').style.display = 'block';
- 
+
   const sectorLabel = document.getElementById('sector').options[document.getElementById('sector').selectedIndex]?.text || '';
   document.getElementById('rCompany').textContent = d.company.toUpperCase() + (sectorLabel ? ' · ' + sectorLabel.replace(/^─+\s*/,'') : '');
   document.getElementById('rBadge').innerHTML = `<div class="nis2badge ${bMap[cls]}">${badge}</div>`;
   document.getElementById('rDesc').textContent = desc;
- 
+
   const allGaps = [...netGaps,...vmsGaps,...acsGaps,...avGaps,...govGaps];
   const nCrit = allGaps.filter(g=>g.prio==='crit').length;
   const nWarn = allGaps.filter(g=>g.prio==='warn'||g.prio==='info').length;
@@ -1204,7 +1207,7 @@ function runAnalysis() {
   document.getElementById('sCrit').textContent = nCrit;
   document.getElementById('sWarn').textContent = nWarn;
   document.getElementById('sOk').textContent   = nOk;
- 
+
   function renderGaps(arr, containerId, secId) {
     if (!arr.length) return;
     document.getElementById(secId).style.display = '';
@@ -1223,21 +1226,21 @@ function runAnalysis() {
       </div>`;
     }).join('');
   }
- 
+
   renderGaps(netGaps,'g-net','sec-net');
   renderGaps(vmsGaps,'g-vms','sec-vms');
   renderGaps(acsGaps,'g-acs','sec-acs');
   renderGaps(avGaps,'g-av','sec-av');
   renderGaps(govGaps,'g-gov','sec-gov');
- 
+
   // Next steps
   let next = '';
   if (nCrit >= 4) next = 'Con ' + nCrit + ' criticit\u00e0 immediate distribuite sui verticali, il percorso consigliato \u00e8 partire da un Audit & Assessment completo (Kaplet DESIGN) per avere una fotografia precisa dell\u2019intera infrastruttura con roadmap prioritizzata. In parallelo, gli interventi urgenti vengono avviati subito nella fase BUILD. Il monitoring continuativo dal DOC Kaplet garantisce la compliance operativa NIS 2 dal 1\u00b0 gennaio 2026.';
   else if (nCrit > 0) next = 'Ci sono ' + nCrit + ' aree critiche che richiedono intervento immediato. Kaplet pu\u00f2 supportare con un percorso mirato (DESIGN + BUILD) sulle vulnerabilit\u00e0 prioritarie, strutturando poi il completamento verso la conformit\u00e0 NIS 2 entro ottobre 2026.';
   else next = 'La postura di sicurezza \u00e8 buona su tutti i verticali. Il passo naturale \u00e8 strutturare la governance NIS 2 (referente CSIRT, IRP, supply chain review) e attivare il monitoring continuativo dal Digital Operation Center Kaplet.';
- 
+
   document.getElementById('rNext').textContent = next;
- 
+
   // Proposta
   let pacchetto = '', inclusi = [], colore = '';
   if (nCrit >= 6) {
@@ -1253,7 +1256,7 @@ function runAnalysis() {
     pacchetto = 'NIS 2 Managed'; colore = 'var(--teal)';
     inclusi = ['Monitoring 24/7 dal DOC Kaplet','Vulnerability scan trimestrale','Report direzionale NIS 2 semestrale','Supporto notifica CSIRT in caso di incidente'];
   }
- 
+
   const propostaEl = document.getElementById('rProposta');
   if (propostaEl) {
     let righe = inclusi.map(function(i) {
@@ -1265,18 +1268,18 @@ function runAnalysis() {
       righe +
       '<div style="margin-top:14px;font-size:11px;color:var(--dim);font-style:italic">Il sopralluogo tecnico definisce la proposta definitiva. Il suo costo viene scalato dal contratto.</div>';
   }
- 
+
   // Store for PDF
   lastResult = {cls, badge, desc, company: d.company + (sectorLabel ? ' · ' + sectorLabel.replace(/^─+\s*/,'') : ''), nCrit, nWarn, nOk, netGaps, vmsGaps, acsGaps, avGaps, govGaps, next, pacchetto, inclusi};
   lastData = d;
- 
+
   // Update filename display
   const fnEl = document.getElementById('pdf-filename');
   if (fnEl) fnEl.textContent = buildFilename(d.company) + '.pdf';
- 
+
   window.scrollTo({top:0,behavior:'smooth'});
 }
- 
+
 // ── RESET ──────────────────────────────────────────────────────────────────
 function resetAll() {
   document.getElementById('results').style.display = 'none';
@@ -1298,7 +1301,7 @@ function resetAll() {
   renderProg();
   window.scrollTo({top:0,behavior:'smooth'});
 }
- 
+
 // init
 renderProg();
 </script>
